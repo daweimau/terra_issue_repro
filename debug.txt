@@ -1,0 +1,989 @@
+2022-11-23T20:52:13.307+1100 [INFO]  Terraform version: 1.3.5
+2022-11-23T20:52:13.308+1100 [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2022-11-23T20:52:13.308+1100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.15.0
+2022-11-23T20:52:13.308+1100 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2022-11-23T20:52:13.308+1100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2022-11-23T20:52:13.308+1100 [DEBUG] using github.com/zclconf/go-cty v1.12.1
+2022-11-23T20:52:13.308+1100 [INFO]  Go runtime version: go1.19.3
+2022-11-23T20:52:13.308+1100 [INFO]  CLI args: []string{"terraform", "apply", "plan.t"}
+2022-11-23T20:52:13.308+1100 [DEBUG] Attempting to open CLI config file: /Users/david/.terraformrc
+2022-11-23T20:52:13.308+1100 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022-11-23T20:52:13.308+1100 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022-11-23T20:52:13.308+1100 [DEBUG] ignoring non-existing provider search directory /Users/david/.terraform.d/plugins
+2022-11-23T20:52:13.308+1100 [DEBUG] ignoring non-existing provider search directory /Users/david/Library/Application Support/io.terraform/plugins
+2022-11-23T20:52:13.308+1100 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2022-11-23T20:52:13.308+1100 [INFO]  CLI command args: []string{"apply", "plan.t"}
+2022-11-23T20:52:13.322+1100 [DEBUG] checking for provisioner in "."
+2022-11-23T20:52:13.323+1100 [DEBUG] checking for provisioner in "/opt/homebrew/bin"
+2022-11-23T20:52:13.323+1100 [INFO]  backend/local: starting Apply operation
+2022-11-23T20:52:13.326+1100 [DEBUG] created provider logger: level=debug
+2022-11-23T20:52:13.326+1100 [INFO]  provider: configuring client automatic mTLS
+2022-11-23T20:52:13.336+1100 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 args=[.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6]
+2022-11-23T20:52:13.338+1100 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 pid=30705
+2022-11-23T20:52:13.338+1100 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6
+2022-11-23T20:52:13.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: configuring server automatic mTLS: timestamp=2022-11-23T20:52:13.347+1100
+2022-11-23T20:52:13.356+1100 [DEBUG] provider.terraform-provider-heroku_v5.1.6: plugin address: address=/var/folders/tb/gdcyz1zs6_391kzd184myfkc0000gn/T/plugin554194857 network=unix timestamp=2022-11-23T20:52:13.356+1100
+2022-11-23T20:52:13.356+1100 [DEBUG] provider: using plugin: version=5
+2022-11-23T20:52:13.368+1100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-11-23T20:52:13.369+1100 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 pid=30705
+2022-11-23T20:52:13.369+1100 [DEBUG] provider: plugin exited
+2022-11-23T20:52:13.369+1100 [INFO]  backend/local: apply calling Apply
+2022-11-23T20:52:13.369+1100 [DEBUG] Building and walking apply graph for NormalMode plan
+2022-11-23T20:52:13.369+1100 [DEBUG] Resource state not found for node "heroku_app.this", instance heroku_app.this
+2022-11-23T20:52:13.369+1100 [DEBUG] Resource state not found for node "heroku_build.this", instance heroku_build.this
+2022-11-23T20:52:13.369+1100 [DEBUG] Resource state not found for node "heroku_formation.this", instance heroku_formation.this
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_formation.this" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_app.this (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_build.this (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_formation.this (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_app.this" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [DEBUG] ProviderTransformer: "heroku_build.this" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/heroku/heroku"]
+2022-11-23T20:52:13.369+1100 [INFO]  ReferenceTransformer: reference not found: "heroku_app.this#destroy"
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_build.this" references: [heroku_app.this (expand) heroku_app.this heroku_app.this heroku_app.this (expand) heroku_app.this heroku_app.this]
+2022-11-23T20:52:13.370+1100 [INFO]  ReferenceTransformer: reference not found: "heroku_build.this#destroy"
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_formation.this" references: [heroku_build.this heroku_build.this heroku_build.this (expand) heroku_app.this (expand) heroku_app.this heroku_app.this]
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/heroku/heroku\"]" references: []
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_app.this (expand)" references: []
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_build.this (expand)" references: []
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_formation.this (expand)" references: []
+2022-11-23T20:52:13.370+1100 [DEBUG] ReferenceTransformer: "heroku_app.this" references: []
+2022-11-23T20:52:13.370+1100 [DEBUG] Starting graph walk: walkApply
+2022-11-23T20:52:13.370+1100 [DEBUG] created provider logger: level=debug
+2022-11-23T20:52:13.370+1100 [INFO]  provider: configuring client automatic mTLS
+2022-11-23T20:52:13.374+1100 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 args=[.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6]
+2022-11-23T20:52:13.375+1100 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 pid=30706
+2022-11-23T20:52:13.375+1100 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6
+2022-11-23T20:52:13.381+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: configuring server automatic mTLS: timestamp=2022-11-23T20:52:13.381+1100
+2022-11-23T20:52:13.389+1100 [DEBUG] provider: using plugin: version=5
+2022-11-23T20:52:13.390+1100 [DEBUG] provider.terraform-provider-heroku_v5.1.6: plugin address: address=/var/folders/tb/gdcyz1zs6_391kzd184myfkc0000gn/T/plugin1427550305 network=unix timestamp=2022-11-23T20:52:13.389+1100
+2022-11-23T20:52:13.402+1100 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/heroku/heroku\"]" changed the config value, but that value is unused
+2022-11-23T20:52:13.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [INFO] Initializing Heroku provider: timestamp=2022-11-23T20:52:13.402+1100
+2022-11-23T20:52:13.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [INFO] Heroku Client configured for user: my_email_address@gmail.com: timestamp=2022-11-23T20:52:13.402+1100
+2022-11-23T20:52:13.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] Heroku provider initialized: {APIKey:xxx Email:my_email_address@gmail.com URL:https://api.heroku.com Headers:xxx DebugHTTP:true PostAppCreateDelay:10 PostDomainCreateDelay:5 PostSpaceCreateDelay:5}: timestamp=2022-11-23T20:52:13.402+1100
+[0m[1mheroku_app.this: Creating...[0m[0m
+2022-11-23T20:52:13.404+1100 [INFO]  Starting apply for heroku_app.this
+2022-11-23T20:52:13.404+1100 [DEBUG] heroku_app.this: applying the planned Create change
+2022-11-23T20:52:13.404+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] setting computed for "all_config_vars" from ComputedKeys: timestamp=2022-11-23T20:52:13.404+1100
+2022-11-23T20:52:13.404+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] setting computed for "sensitive_config_vars" from ComputedKeys: timestamp=2022-11-23T20:52:13.404+1100
+2022-11-23T20:52:13.404+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] setting computed for "config_vars" from ComputedKeys: timestamp=2022-11-23T20:52:13.404+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] App name: my-magic-app-123456789: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] App region: us: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 [DEBUG] Creating Heroku app...: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 POST /apps HTTP/1.1: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Host: api.heroku.com: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Content-Length: 47: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Authorization: [redacted]: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Content-Type: application/json: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Request-Id: 031ed0ba-2ca1-44a3-8d99-0870ddcbe072: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:13.405+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:13 {"name":"my-magic-app-123456789","region":"us"}: timestamp=2022-11-23T20:52:13.405+1100
+2022-11-23T20:52:14.500+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 HTTP/2.0 201 Created
+Cache-Control: private, no-cache
+Content-Expansion: region
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:14 GMT
+Location: https://my-magic-app-123456789.herokuapp.com/
+Oauth-Scope: global
+Oauth-Scope-Accepted: create-apps global write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4499
+Request-Id: 1f76acc2-038f-441a-af24-7c8e5f289032,031ed0ba-2ca1-44a3-8d99-0870ddcbe072,49ec226d-6882-6b74-ac95-2bbce5a82fc1,dbd80dd1-cd5b-4092-557e-949d451adc64
+Traceparent: 00-97793dd71b4465e106c6e8bb81dd49f9-25b2a76649d72b9f-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.181451511
+
+{"acm":false,"archived_at":null,"buildpack_provided_description":null,"build_stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"created_at":"2022-11-23T09:52:14Z","id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","git_url":"https://git.heroku.com/my-magic-app-123456789.git","maintenance":false,"name":"my-magic-app-123456789","owner":{"email":"my_email_address@gmail.com","id":"my-user-id-123"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"organization":null,"team":null,"space":null,"internal_routing":null,"released_at":"2022-11-23T09:52:14Z","repo_size":null,"slug_size":null,"stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"updated_at":"2022-11-23T09:52:14Z","web_url":"https://my-magic-app-123456789.herokuapp.com/"}: timestamp=2022-11-23T20:52:14.500+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 [INFO] App ID: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f: timestamp=2022-11-23T20:52:14.500+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 [INFO] Checking for duplicate config vars: timestamp=2022-11-23T20:52:14.500+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 [INFO] List of Duplicate config vars []: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 [INFO] Updating config vars: *map[string]*string{}: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 PATCH /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/config-vars HTTP/1.1: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Host: api.heroku.com: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Content-Length: 2: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Authorization: [redacted]: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Content-Type: application/json: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Request-Id: ad0c9536-8693-440f-822d-66957d94a36a: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.501+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 {}: timestamp=2022-11-23T20:52:14.501+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:14 GMT
+Etag: "03242b9aecdfb75b789e7b3c01e52f68"
+Last-Modified: Wed, 23 Nov 2022 09:52:14 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 99
+Request-Id: ea9f999b-825e-4b51-8cf4-c1d705481c75,ad0c9536-8693-440f-822d-66957d94a36a,a8959ee5-84fa-87b9-9f11-ff880ce47695,4d4ede59-4bcf-f310-4f53-f41539a2f673
+Traceparent: 00-d68fabfab822f53bf9181837ee041443-19339dc8f85325aa-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.058020532
+
+{}: timestamp=2022-11-23T20:52:14.815+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/releases HTTP/1.1: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Host: api.heroku.com: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Authorization: [redacted]: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Range: version ..; max=1,order=desc: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14 Request-Id: 25854ee2-4004-4c15-b6b5-60173663d54c: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:14.816+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:14: timestamp=2022-11-23T20:52:14.816+1100
+2022-11-23T20:52:15.168+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 HTTP/2.0 206 Partial Content
+Content-Length: 426
+Accept-Ranges: uuid, version
+Cache-Control: private, no-cache
+Content-Range: version 2..2
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:15 GMT
+Etag: "3522253d41ba3b44ab153cbd1fbfe153"
+Last-Modified: Wed, 23 Nov 2022 09:52:14 GMT
+Next-Range: version ]2..; max=1, order=desc
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read-protected write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4498
+Request-Id: fdab1c2a-6f4d-4ed9-bd36-39e76836fdc3,25854ee2-4004-4c15-b6b5-60173663d54c,86cffbec-f294-6a06-2336-a07575290aca,7b14b680-e6ef-cc0f-f932-49096256594c
+Traceparent: 00-7824a3fa3f91f4d4bb52ba5a470a5243-0c8d53504fc69fd4-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.069683292
+
+[{"addon_plan_names":[],"app":{"id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","name":"my-magic-app-123456789"},"created_at":"2022-11-23T09:52:14Z","description":"Enable Logplex","status":"succeeded","id":"3c1b6fb3-4022-4deb-87a2-15efecea0db3","slug":null,"updated_at":"2022-11-23T09:52:14Z","user":{"email":"my_email_address@gmail.com","id":"my-user-id-123"},"version":2,"current":true,"output_stream_url":null}]: timestamp=2022-11-23T20:52:15.168+1100
+2022-11-23T20:52:15.169+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 [DEBUG] Waiting for state to become: [succeeded]: timestamp=2022-11-23T20:52:15.168+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/releases/3c1b6fb3-4022-4deb-87a2-15efecea0db3 HTTP/1.1: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Host: api.heroku.com: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Authorization: [redacted]: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Request-Id: 40e09f19-bf7d-4881-a748-fbd0237b4f35: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.170+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15: timestamp=2022-11-23T20:52:15.169+1100
+2022-11-23T20:52:15.474+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:15 GMT
+Etag: "6e3ab2a804c7e62ce8e979621c4b4a21"
+Last-Modified: Wed, 23 Nov 2022 09:52:14 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read-protected write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4497
+Request-Id: eaf12249-1baa-4fc6-b499-7bbc132439ac,40e09f19-bf7d-4881-a748-fbd0237b4f35,3137da79-7aeb-6a26-010b-3522a77bb044,5712e323-60b5-a8c5-1ed2-461f5357ff2d
+Traceparent: 00-9a740ef6b86f36ed3c381cd82814cb2f-5fcbe4653d1202a3-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.059828785
+
+{"addon_plan_names":[],"app":{"id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","name":"my-magic-app-123456789"},"created_at":"2022-11-23T09:52:14Z","description":"Enable Logplex","status":"succeeded","id":"3c1b6fb3-4022-4deb-87a2-15efecea0db3","slug":null,"updated_at":"2022-11-23T09:52:14Z","user":{"email":"my_email_address@gmail.com","id":"my-user-id-123"},"version":2,"current":true,"output_stream_url":null}: timestamp=2022-11-23T20:52:15.473+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 PUT /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/buildpack-installations HTTP/1.1: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Host: api.heroku.com: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Content-Length: 43: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Authorization: [redacted]: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Content-Type: application/json: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Request-Id: 4f0d9df0-04b2-494e-b79a-d75073dc4d41: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.475+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 {"updates":[{"buildpack":"heroku/nodejs"}]}: timestamp=2022-11-23T20:52:15.474+1100
+2022-11-23T20:52:15.806+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:15 GMT
+Etag: "277bd3d24bdf954a5db1183fb395e372"
+Last-Modified: Wed, 23 Nov 2022 09:52:15 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4497
+Request-Id: 3945cd48-d41c-4c2c-82ab-926dab7853ec,4f0d9df0-04b2-494e-b79a-d75073dc4d41,7c49ae4a-9616-3fe2-0567-8acfddc9fccc,999c39f9-ec37-e402-4d81-c714a79018f2
+Traceparent: 00-4ee17f6ff2e62e37f7874538b8d0e59f-10213a52ae1f2bbe-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.085759657
+
+[{"buildpack":{"url":"urn:buildpack:heroku/nodejs","name":"heroku/nodejs"},"ordinal":0}]: timestamp=2022-11-23T20:52:15.806+1100
+2022-11-23T20:52:15.807+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f HTTP/1.1: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.807+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Host: api.heroku.com: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.807+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.807+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.808+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Authorization: [redacted]: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.808+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Request-Id: 01e76ebb-8826-421c-8d9d-f77a9586b724: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.808+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:15.808+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:15: timestamp=2022-11-23T20:52:15.807+1100
+2022-11-23T20:52:16.117+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Expansion: region
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:16 GMT
+Etag: "277bd3d24bdf954a5db1183fb395e372"
+Last-Modified: Wed, 23 Nov 2022 09:52:15 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read read-protected write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4496
+Request-Id: 59ab290c-ac6f-4222-9d80-c7e751a54ff6,01e76ebb-8826-421c-8d9d-f77a9586b724,91d49701-98c2-7d31-d980-ad5097522137,e9f28056-8d83-c08e-2730-c9c032fa6ad1
+Traceparent: 00-2cc5663f1027b9bfdf24033684537753-c174c92b0beceb57-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.061006955
+
+{"acm":false,"archived_at":null,"buildpack_provided_description":null,"build_stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"created_at":"2022-11-23T09:52:14Z","id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","git_url":"https://git.heroku.com/my-magic-app-123456789.git","maintenance":false,"name":"my-magic-app-123456789","owner":{"email":"my_email_address@gmail.com","id":"my-user-id-123"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"organization":null,"team":null,"space":null,"internal_routing":null,"released_at":"2022-11-23T09:52:14Z","repo_size":null,"slug_size":null,"stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"updated_at":"2022-11-23T09:52:15Z","web_url":"https://my-magic-app-123456789.herokuapp.com/"}: timestamp=2022-11-23T20:52:16.117+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/buildpack-installations HTTP/1.1: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Host: api.heroku.com: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Authorization: [redacted]: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Request-Id: 287c82fa-82e3-4499-b8c3-6099559c3c05: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.118+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16: timestamp=2022-11-23T20:52:16.118+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:16 GMT
+Etag: "277bd3d24bdf954a5db1183fb395e372"
+Last-Modified: Wed, 23 Nov 2022 09:52:15 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read-protected write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4496
+Request-Id: 6b10a2f7-c4d7-4524-8f15-c426d05deb2c,287c82fa-82e3-4499-b8c3-6099559c3c05,3cacc638-6d44-b1b7-5739-f424accba290,2572191d-0c22-ac5a-89e2-01ac5f182cc6
+Traceparent: 00-2b9c517f2b65d3fe6a4e9fe5586c1122-dfac7efe10f7e23e-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.040347546
+
+[{"buildpack":{"url":"urn:buildpack:heroku/nodejs","name":"heroku/nodejs"},"ordinal":0}]: timestamp=2022-11-23T20:52:16.401+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/config-vars HTTP/1.1: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Host: api.heroku.com: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Authorization: [redacted]: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Request-Id: 00dc9047-0b13-4f0d-a38d-657f2950c0ec: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.402+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16: timestamp=2022-11-23T20:52:16.402+1100
+2022-11-23T20:52:16.698+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:16 GMT
+Etag: "03242b9aecdfb75b789e7b3c01e52f68"
+Last-Modified: Wed, 23 Nov 2022 09:52:14 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read-protected write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4495
+Request-Id: 4b5cec64-94d3-494d-8c19-5de87878341c,00dc9047-0b13-4f0d-a38d-657f2950c0ec,437c7e8d-a6f0-0dac-6717-f31a7a7a0c8f,626c4a24-77c5-1e6e-549b-459ebfa72afa
+Traceparent: 00-52251c7560f7deeb9a69cd91c49a9f84-479f48679058eb22-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.049991013
+
+{}: timestamp=2022-11-23T20:52:16.698+1100
+2022-11-23T20:52:16.698+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 [LOG] Setting config vars: map[]: timestamp=2022-11-23T20:52:16.698+1100
+2022-11-23T20:52:16.698+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:16 [LOG] Setting sensitive config vars: map[]: timestamp=2022-11-23T20:52:16.698+1100
+[0m[1mheroku_app.this: Still creating... [10s elapsed][0m[0m
+[0m[1mheroku_app.this: Creation complete after 14s [id=9d8fbed1-627b-401f-89f5-fb9c36ae5a1f][0m
+2022-11-23T20:52:26.726+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src (name): timestamp=2022-11-23T20:52:26.726+1100
+2022-11-23T20:52:26.726+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src/index.js (name): timestamp=2022-11-23T20:52:26.726+1100
+2022-11-23T20:52:26.726+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← 20 (bytes): timestamp=2022-11-23T20:52:26.726+1100
+2022-11-23T20:52:26.726+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src/package.json (name): timestamp=2022-11-23T20:52:26.726+1100
+2022-11-23T20:52:26.727+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← 226 (bytes): timestamp=2022-11-23T20:52:26.727+1100
+2022-11-23T20:52:26.727+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash sum → SHA256:3a1ab0502d6980698760b76d20ebc737dcf9024e17a394b625803bd78cc2ec60: timestamp=2022-11-23T20:52:26.727+1100
+2022-11-23T20:52:26.727+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] Diffing source: old '', new '', real 'SHA256:3a1ab0502d6980698760b76d20ebc737dcf9024e17a394b625803bd78cc2ec60': timestamp=2022-11-23T20:52:26.727+1100
+[0m[1mheroku_build.this: Creating...[0m[0m
+2022-11-23T20:52:26.727+1100 [INFO]  Starting apply for heroku_build.this
+2022-11-23T20:52:26.730+1100 [DEBUG] heroku_build.this: applying the planned Create change
+2022-11-23T20:52:26.732+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] setting computed for "user" from ComputedKeys: timestamp=2022-11-23T20:52:26.732+1100
+2022-11-23T20:52:26.732+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] setting computed for "buildpacks" from ComputedKeys: timestamp=2022-11-23T20:52:26.732+1100
+2022-11-23T20:52:26.732+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] App id name: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f: timestamp=2022-11-23T20:52:26.732+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src (name): timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src/index.js (name): timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← 20 (bytes): timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← src/package.json (name): timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash ← 226 (bytes): timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 [DEBUG] hash sum → SHA256:3a1ab0502d6980698760b76d20ebc737dcf9024e17a394b625803bd78cc2ec60: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 POST /sources HTTP/1.1: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Host: api.heroku.com: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Content-Length: 0: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Authorization: [redacted]: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Request-Id: b79891d3-d275-4c44-9115-a9a7265cfbd6: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:26.734+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:26: timestamp=2022-11-23T20:52:26.734+1100
+2022-11-23T20:52:27.047+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:27 HTTP/2.0 201 Created
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:26 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4499
+Request-Id: 5f9d5846-9c6e-4e4d-89b6-1b848b94b879,b79891d3-d275-4c44-9115-a9a7265cfbd6,642fb064-ee70-cd06-cf2c-59b2b61074b8,0fd12de2-a313-baba-b2c9-4029023455de
+Traceparent: 00-c401f9a7ea582cbbc098bcd2ce62a200-fba99d251d721ca4-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.052953421
+
+{"source_blob":{"get_url":"https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746","put_url":"https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=fu2f9BHRzn3M3U1jS4xSbGWt7q8%3D&Expires=1669200746"}}: timestamp=2022-11-23T20:52:27.047+1100
+2022-11-23T20:52:27.047+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:27 [DEBUG] Uploading source '/var/folders/tb/gdcyz1zs6_391kzd184myfkc0000gn/T/terraform-heroku_build-source-4050782504.tar.gz' to PUT https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=fu2f9BHRzn3M3U1jS4xSbGWt7q8%3D&Expires=1669200746: timestamp=2022-11-23T20:52:27.047+1100
+2022-11-23T20:52:27.048+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:27 [DEBUG] Upload source request: &{Method:PUT URL:https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=fu2f9BHRzn3M3U1jS4xSbGWt7q8%3D&Expires=1669200746 Proto:HTTP/1.1 ProtoMajor:1 ProtoMinor:1 Header:map[] Body:0x14000142a68 GetBody:<nil> ContentLength:350 TransferEncoding:[] Close:false Host:s3-external-1.amazonaws.com Form:map[] PostForm:map[] MultipartForm:<nil> Trailer:map[] RemoteAddr: RequestURI: TLS:<nil> Cancel:<nil> Response:<nil> ctx:0x1400012a000}: timestamp=2022-11-23T20:52:27.047+1100
+2022-11-23T20:52:28.189+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 [DEBUG] Source upload response: HTTP/1.1 200 OK
+Content-Length: 0
+Date: Wed, 23 Nov 2022 09:52:29 GMT
+Etag: "44d723b65570397eae9b6c2a4f1456a4"
+Server: AmazonS3
+X-Amz-Expiration: expiry-date="Thu, 08 Dec 2022 00:00:00 GMT", rule-id="Delete After 14 days"
+X-Amz-Id-2: gWhBuCHTVe/ShWL2YJj6VjnqSiUsq8OOZIwp/DNy2UogHi7doYxxfq/IdO5yFIaIg83wwfPyfPQ=
+X-Amz-Request-Id: ECDN9XX0ZFT87WKQ
+
+: timestamp=2022-11-23T20:52:28.188+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 POST /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds HTTP/1.1: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Host: api.heroku.com: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Content-Length: 240: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Authorization: [redacted]: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Content-Type: application/json: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Request-Id: 312d5e32-4627-490f-9495-4016e4523a4a: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:28.190+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:28 {"source_blob":{"url":"https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ\u0026Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D\u0026Expires=1669200746"}}: timestamp=2022-11-23T20:52:28.189+1100
+2022-11-23T20:52:29.209+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 HTTP/2.0 201 Created
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:29 GMT
+Request-Id: 15bc55ee-f1ba-bc6d-5bb7-dba4db93f36b
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVjOGJkMzFjMmJhOTAxMmE0NzIxOWU3MWIxNGNmODU3MTE3ODllNGRlNjkyNTliYTAzNDhkZjM3YWVjZWMxNTFjBjsARkkiCWNzcmYGOwBGSSIxVm8tQnNzUm92ZDVTeHViLXRER055OHlaSzJtajUzYV9GVTItN1RLYmQtND0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--770eac288a403f51d29ec8ff9c8e02255dc2e239; path=/; HttpOnly
+Traceparent: 00-b589e39bd54827f706f7dc49c5dc5abe-59b6d0869bace448-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095229Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a8c0eb43ff9d7b52d7b74e64ddb803e5c04b501ada1a65efac5ab507924051ea",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:29.209+1100
+2022-11-23T20:52:29.210+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 [DEBUG] Waiting for Build (9d8fbed1-627b-401f-89f5-fb9c36ae5a1f:a7359b96-d160-4612-9180-f84a8e10519d) to complete: timestamp=2022-11-23T20:52:29.209+1100
+2022-11-23T20:52:29.210+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 [DEBUG] Waiting for state to become: [succeeded]: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Host: api.heroku.com: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Authorization: [redacted]: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Request-Id: a0a98c83-061d-47a5-9fb5-05796bcdd5cc: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.211+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29: timestamp=2022-11-23T20:52:29.210+1100
+2022-11-23T20:52:29.646+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:29 GMT
+Request-Id: 273e73a6-b277-f685-5e1c-af2d673ecd3b
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVhY2IwNTg3MDFjOTk3YzhiYmMyZDNjODU0MGY2NTI5ZjhmZWViYWQ4ZmQ4NGVjZDFhMDFhY2VkYThmNjRmYTNhBjsARkkiCWNzcmYGOwBGSSIxTFZMMnU3M3lzQ1lXSm1MVEt1RU9BR1MwY1lic3lOcWVabV9iX3NockoxUT0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--89fa4b58ad5e2da1708fcfa23e9df4a71e5af51b; path=/; HttpOnly
+Traceparent: 00-7412bb6f2e0e24f0e46243d681b701df-454548f6358d5e7e-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095229Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a8c0eb43ff9d7b52d7b74e64ddb803e5c04b501ada1a65efac5ab507924051ea",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:29.646+1100
+2022-11-23T20:52:29.646+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:29.646+1100
+2022-11-23T20:52:29.646+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 [TRACE] Waiting 200ms before next try: timestamp=2022-11-23T20:52:29.646+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Host: api.heroku.com: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Authorization: [redacted]: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Request-Id: 58451eb3-70a6-481e-9f23-b885b91fa67f: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:29.851+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:29: timestamp=2022-11-23T20:52:29.849+1100
+2022-11-23T20:52:30.268+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:30 GMT
+Request-Id: c6bd0f93-4380-fa52-27bc-3849c1817340
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkU5MWRmODkyNGVjNGM5NTMwMWFiYjdjYzM3NWE5MTYyODY0ZDQwNTAxYmQ2MTlkMzU2NjU5YjljYTE5MjgzNzMxBjsARkkiCWNzcmYGOwBGSSIxTENTODdMY1MtaVNNRUY5bkkwTUVIbDRFT0NDMnQxLUlHTC1LeG54Z0dVZz0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--163ded21a11ce133a9822a53968df85ab21a3cff; path=/; HttpOnly
+Traceparent: 00-421ff196c66161dd33445af1e8f223b5-5519fb764db33889-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095230Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=72b9531090ef82ac7882d692dfe2088707164b1d274f44101f8c47bbf63350b5",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:30.268+1100
+2022-11-23T20:52:30.268+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:30.268+1100
+2022-11-23T20:52:30.268+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 [TRACE] Waiting 400ms before next try: timestamp=2022-11-23T20:52:30.268+1100
+2022-11-23T20:52:30.670+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.670+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 Host: api.heroku.com: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.670+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.670+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.670+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 Authorization: [redacted]: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.671+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 Request-Id: 5a5e1d67-5a52-4ac0-8270-3342950dc481: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.671+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:30.671+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:30: timestamp=2022-11-23T20:52:30.670+1100
+2022-11-23T20:52:31.083+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:30 GMT
+Request-Id: 76d034f1-d818-4602-bf56-cff980428004
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkU3Y2EyYTZmNjgwYzRhNjY3YjEyNzZjMzZhM2JkOTdlMzhjNGQ0NGYyZWMzMDhhNzA0YTBiYWQxODYwOWVmMzBmBjsARkkiCWNzcmYGOwBGSSIxMjFUYnllbGg0WS1XbWgxcjcxMkhud2tVSlY3aVFnOTU2OE5ULXRaVTN5dz0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--0acc7910dcc8bc55c29b2fc3e2261de7dca34a96; path=/; HttpOnly
+Traceparent: 00-57357c42b95ff549f5aa135054ce6bd2-b9d5414a353a1871-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095230Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=72b9531090ef82ac7882d692dfe2088707164b1d274f44101f8c47bbf63350b5",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:31.082+1100
+2022-11-23T20:52:31.083+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:31.083+1100
+2022-11-23T20:52:31.083+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 [TRACE] Waiting 800ms before next try: timestamp=2022-11-23T20:52:31.083+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:31.884+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 Host: api.heroku.com: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 Authorization: [redacted]: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 Request-Id: a3d569f7-a5af-46ce-b92f-7551a073b39b: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:31.885+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:31: timestamp=2022-11-23T20:52:31.885+1100
+2022-11-23T20:52:32.301+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:32 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:32 GMT
+Request-Id: 7e7d5b23-59b4-a3eb-a516-cab25184df22
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkU0YzNhMjljNGRmODVhY2I1MzY1MDRiYjVkOGViNGZkYWFjMWYzOTcwYzYxZjI1NDlkYTYxMzE0M2I5ZGFhOTFlBjsARkkiCWNzcmYGOwBGSSIxRXNHVHZNcnd4ZkEwVmp4d2dfMFhtRVpiVVF6ekVfbmRGOTdObk1Qa0NJWT0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--011c76cb9f1a3e7785dd99904bb85a3cf8d9aaf0; path=/; HttpOnly
+Traceparent: 00-b5d2863f0c398a1db0793fdd2ae35f50-837f5a096f8e9110-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095232Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5e066651698918c476ccbea7fbe15b255cb38780d164fa3fd05382041571859a",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:32.301+1100
+2022-11-23T20:52:32.301+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:32 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:32.301+1100
+2022-11-23T20:52:32.301+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:32 [TRACE] Waiting 1.6s before next try: timestamp=2022-11-23T20:52:32.301+1100
+2022-11-23T20:52:33.903+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 Host: api.heroku.com: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 Authorization: [redacted]: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 Request-Id: 6be7bd3f-2859-4e19-99c2-9124e62e6318: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:33.904+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:33: timestamp=2022-11-23T20:52:33.903+1100
+2022-11-23T20:52:34.314+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:34 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:34 GMT
+Request-Id: 3e9a8494-3b9b-b3ef-78dc-5ec2e5d9ba27
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVlYTk4MTJjOGFmYzhhMGZhNmE5NmUwZjJhODJkY2YxZjQxMDA3MjBjZjY1NTJlMDViYjE3MzIyOWQ3OTY0YzRhBjsARkkiCWNzcmYGOwBGSSIxdEpqN2ljeWxkS2xUM1ZnLXFtYUhiZEdrMXhtLXNiU1BTb0FpeHN3Nmw0TT0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--2569f92fc91300e0f2017f0041acdf117eea5a9d; path=/; HttpOnly
+Traceparent: 00-fb18ac9276bf22e802f3662ca111ab3e-14ecd4f8f888c3f7-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095234Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=54d07deb28e6ea701da298ed2e8e5c4d00e7891e9264c456d9e45439614c1c7b",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:34.314+1100
+2022-11-23T20:52:34.314+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:34 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:34.314+1100
+2022-11-23T20:52:34.314+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:34 [TRACE] Waiting 3.2s before next try: timestamp=2022-11-23T20:52:34.314+1100
+[0m[1mheroku_build.this: Still creating... [10s elapsed][0m[0m
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 Host: api.heroku.com: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 Authorization: [redacted]: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 Request-Id: b731811f-5f56-4730-aa4e-9fab6b14602e: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.517+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37: timestamp=2022-11-23T20:52:37.516+1100
+2022-11-23T20:52:37.935+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:37 GMT
+Request-Id: f980da98-d998-5283-7beb-00b4cfb95dff
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVjOTU5N2Q5ODEwMDBiZmQ3NzBiNjg4YTFiZjk2NWY0NDg2MmVhNTQ3NWVkZWIyN2YwZjZlNWQzYjEyZjBkMTE2BjsARkkiCWNzcmYGOwBGSSIxakJkM0dtUGJJZ2Rqb21BX1dZWklKSU0wOHY5QTY4MjkzSXZKQzVBSE1vND0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--bbccd6bc50c538db020b00f466065c4e1a74e940; path=/; HttpOnly
+Traceparent: 00-2d91682b1364a183e56b1eefc427b15b-3e63983f9516d331-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095237Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=b0ab0be6f3df559e73040e15efc52aea0cd9b68d79cbf861443c88a7d495ba1e",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:37.935+1100
+2022-11-23T20:52:37.935+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:37.935+1100
+2022-11-23T20:52:37.935+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:37 [TRACE] Waiting 6.4s before next try: timestamp=2022-11-23T20:52:37.935+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 Host: api.heroku.com: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 Authorization: [redacted]: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 Request-Id: 8c650b08-80b9-4293-b7d7-7607fcbbff97: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.337+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44: timestamp=2022-11-23T20:52:44.337+1100
+2022-11-23T20:52:44.748+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 HTTP/2.0 200 OK
+Content-Length: 1245
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:44 GMT
+Request-Id: ae8681d7-1a36-61ab-2358-6ed317ffd8a3
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVkY2Y5NjkxMmUyYjkwNmFlNTAxNWY2MTRhOTI1MzIzYWQ0MzA5MTRmMmQzMTg3N2JlYWIyY2JlZmQwYWU1MDUyBjsARkkiCWNzcmYGOwBGSSIxV2g0eEcwQ2txREpCcWpqWm4wOE5ZaTRKcl9EZGM4OEpMNHZ4dHhuRHQzYz0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--b6e6aabb990f1ead9a9bd7daf1fb67a098b649c6; path=/; HttpOnly
+Traceparent: 00-a0ac5684184087326a19f24da147d389-e8fa2b5bb33e95ac-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095244Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=105e3e073983a35cf101305effd65452c4d580e8c1a15952d6de672ec439076f",
+  "release": null,
+  "slug": null,
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "pending",
+  "updated_at": "2022-11-23T09:52:28Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:44.747+1100
+2022-11-23T20:52:44.748+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 [DEBUG] Build pending (app: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f): timestamp=2022-11-23T20:52:44.748+1100
+2022-11-23T20:52:44.748+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:44 [TRACE] Waiting 10s before next try: timestamp=2022-11-23T20:52:44.748+1100
+[0m[1mheroku_build.this: Still creating... [20s elapsed][0m[0m
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 Host: api.heroku.com: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 Authorization: [redacted]: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 Request-Id: f5f459e6-ff81-42d9-938b-0b4db7920959: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:54.750+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:54: timestamp=2022-11-23T20:52:54.750+1100
+2022-11-23T20:52:55.152+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 HTTP/2.0 200 OK
+Content-Length: 1347
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:55 GMT
+Request-Id: 2ad562d4-9684-26fd-4ac3-912c1d2078cf
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkUwODhhZmQzY2VhODdlM2ZiZGRlOWJjZGRkOGVjM2NiYjBkODVmZmM4NDU3NGFhYWY1NjJhOTk4YWVlYmVkMDExBjsARkkiCWNzcmYGOwBGSSIxNG1QdXBWWHlibkZHTThGZEIxb1NTYkZjeEZFTUFJR0x2ZmdheGlZakExbz0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--3531b75724b96e64331230864e908e11705c0253; path=/; HttpOnly
+Traceparent: 00-d12bd21368f1c45e4bbf6455899dcd54-b2423eb30867772c-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4499
+X-Ratelimit-Reset: 1
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095255Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a4d071ea47b8573c12acbc93e14780c4d8034c6e4282be84a7c8561936d546df",
+  "release": {
+    "id": "927b19d2-ce92-460c-8578-f043f86bad6e"
+  },
+  "slug": {
+    "id": "30e87f0f-7c99-493c-8876-2bc0abbd5c90"
+  },
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "succeeded",
+  "updated_at": "2022-11-23T09:52:44Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:55.152+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/builds/a7359b96-d160-4612-9180-f84a8e10519d HTTP/1.1: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Host: api.heroku.com: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Authorization: [redacted]: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Request-Id: cf80de54-c7e3-4272-bf1a-690c05bd034d: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.153+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55: timestamp=2022-11-23T20:52:55.153+1100
+2022-11-23T20:52:55.566+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 HTTP/2.0 200 OK
+Content-Length: 1347
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:55 GMT
+Request-Id: 2207f213-551e-0de4-00b5-e32262e45856
+Set-Cookie: vacuole.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkU2NDBiNTBjZDkxN2NlZjNmZTBlZWI0NmMyMjkzYjM4MGEzNjM4ZGZiNTllMWVhYjBlZjdlYzY0MGNkZmRjMjdlBjsARkkiCWNzcmYGOwBGSSIxMlIxdHB3dTRLV2dud0pRRV9faHBpRTZsVFJaRkI1aGxWRUpFN2VvUlVTaz0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItNjIxYzU1NTlhNmQ3YTQ3NWQzZDI5MGRlZDQ4N2UyYWYxMDJlM2U3MQY7AEY%3D--ccab65d56ab9dbc9e0368f8ba51c663e42a09e7b; path=/; HttpOnly
+Traceparent: 00-0901b6bd292a14bba485cb4e27edb64c-8f451baa347b75cb-01
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Ratelimit-Limit: 4500
+X-Ratelimit-Remaining: 4498
+X-Ratelimit-Reset: 2
+
+{
+  "app": {
+    "id": "9d8fbed1-627b-401f-89f5-fb9c36ae5a1f"
+  },
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz"
+    }
+  ],
+  "created_at": "2022-11-23T09:52:28Z",
+  "id": "a7359b96-d160-4612-9180-f84a8e10519d",
+  "output_stream_url": "https://build-output.heroku.com/streams/9d/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/logs/a7/a7359b96-d160-4612-9180-f84a8e10519d.log?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZSXS6CXK3PQ5Y6GY%2F20221123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221123T095255Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a4d071ea47b8573c12acbc93e14780c4d8034c6e4282be84a7c8561936d546df",
+  "release": {
+    "id": "927b19d2-ce92-460c-8578-f043f86bad6e"
+  },
+  "slug": {
+    "id": "30e87f0f-7c99-493c-8876-2bc0abbd5c90"
+  },
+  "source_blob": {
+    "checksum": null,
+    "url": "https://s3-external-1.amazonaws.com/heroku-sources-production/1bf4d/1bf4df48-7f63-4a13-8004-e231f275c8c1?AWSAccessKeyId=AKIAZSXS6CXK7IPHNFWZ&Signature=gSmitvNrI%2FylFcn05x0XCXq%2FsDk%3D&Expires=1669200746",
+    "version": null,
+    "version_description": null
+  },
+  "stack": "heroku-22",
+  "status": "succeeded",
+  "updated_at": "2022-11-23T09:52:44Z",
+  "user": {
+    "email": "my_email_address@gmail.com",
+    "id": "my-user-id-123"
+  }
+}: timestamp=2022-11-23T20:52:55.565+1100
+2022-11-23T20:52:55.566+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 [INFO] Created build ID: a7359b96-d160-4612-9180-f84a8e10519d: timestamp=2022-11-23T20:52:55.566+1100
+2022-11-23T20:52:55.568+1100 [WARN]  Provider "provider[\"registry.terraform.io/heroku/heroku\"]" produced an unexpected new value for heroku_build.this, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source[0].url: was null, but now cty.StringVal("")
+      - .source[0].version: was null, but now cty.StringVal("")
+[0m[1mheroku_build.this: Creation complete after 29s [id=a7359b96-d160-4612-9180-f84a8e10519d][0m
+2022-11-23T20:52:55.593+1100 [WARN]  Provider "registry.terraform.io/heroku/heroku" produced an invalid plan for heroku_formation.this, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .size: planned value cty.StringVal("Hobby") does not match config value cty.StringVal("hobby")
+[0m[1mheroku_formation.this: Creating...[0m[0m
+2022-11-23T20:52:55.593+1100 [INFO]  Starting apply for heroku_formation.this
+2022-11-23T20:52:55.593+1100 [DEBUG] heroku_formation.this: applying the planned Create change
+2022-11-23T20:52:55.593+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 [DEBUG] App id name: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f HTTP/1.1: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Host: api.heroku.com: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Authorization: [redacted]: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Request-Id: 01b7f5cf-a204-44ab-8d0a-3a4be83f7aba: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.594+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55: timestamp=2022-11-23T20:52:55.593+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Expansion: region
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:55 GMT
+Etag: "6a0cc2984d7af5a0dcf810895b5e0b65"
+Last-Modified: Wed, 23 Nov 2022 09:52:44 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read read-protected write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4498
+Request-Id: 8c5b2af7-9561-4ad4-84a0-68c0cc1b484b,01b7f5cf-a204-44ab-8d0a-3a4be83f7aba,d0b0bdce-ef45-6a1c-b911-5933d9040f08,d37b6705-fd48-4820-6714-f1c30d36cf24
+Traceparent: 00-7c01f7d7425de5f00be9c8dda8c3aa7b-ddd0cf54f84dbbc9-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.067861485
+
+{"acm":false,"archived_at":null,"buildpack_provided_description":"Node.js","build_stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"created_at":"2022-11-23T09:52:14Z","id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","git_url":"https://git.heroku.com/my-magic-app-123456789.git","maintenance":false,"name":"my-magic-app-123456789","owner":{"email":"my_email_address@gmail.com","id":"my-user-id-123"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"organization":null,"team":null,"space":null,"internal_routing":null,"released_at":"2022-11-23T09:52:44Z","repo_size":null,"slug_size":43584314,"stack":{"id":"5fc4e202-3efa-40a9-9789-3e104b74cf89","name":"heroku-22"},"updated_at":"2022-11-23T09:52:44Z","web_url":"https://my-magic-app-123456789.herokuapp.com/"}: timestamp=2022-11-23T20:52:55.923+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 [DEBUG] Size: hobby: timestamp=2022-11-23T20:52:55.923+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 [DEBUG] Updating 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f formation...: timestamp=2022-11-23T20:52:55.923+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 [DEBUG] Formation type: web: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 PATCH /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/formation/web HTTP/1.1: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Host: api.heroku.com: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Content-Length: 16: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Authorization: [redacted]: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Content-Type: application/json: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Request-Id: fdda83b9-5182-4719-a945-3c8a6fe727cc: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:55.924+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:55 {"size":"hobby"}: timestamp=2022-11-23T20:52:55.924+1100
+2022-11-23T20:52:56.346+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:56 GMT
+Etag: "6a0cc2984d7af5a0dcf810895b5e0b65"
+Last-Modified: Wed, 23 Nov 2022 09:52:44 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4497
+Request-Id: 039b75c4-afc6-49fa-8631-a46fcad0e9d9,fdda83b9-5182-4719-a945-3c8a6fe727cc,e2258810-586b-7f3f-0ac0-d16e3cf4d33c,56be4564-542b-d913-e83d-2c07d337f09c
+Traceparent: 00-30a6ff2468ab81f71f54ad9a3a9707d2-cbf6fd8d8808f01b-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.173253879
+
+{"app":{"id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","name":"my-magic-app-123456789"},"command":"npm start","created_at":"2022-11-23T09:52:44Z","id":"faa71e0a-4d17-4a77-aeac-42803581e13b","type":"web","quantity":1,"size":"Hobby","updated_at":"2022-11-23T09:52:56Z"}: timestamp=2022-11-23T20:52:56.345+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 [INFO] Formation ID: faa71e0a-4d17-4a77-aeac-42803581e13b: timestamp=2022-11-23T20:52:56.345+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 [DEBUG] App id name: 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f: timestamp=2022-11-23T20:52:56.345+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 [INFO] The formation's app is 9d8fbed1-627b-401f-89f5-fb9c36ae5a1f: timestamp=2022-11-23T20:52:56.345+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 [INFO] f.Id is faa71e0a-4d17-4a77-aeac-42803581e13b: timestamp=2022-11-23T20:52:56.345+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 GET /apps/9d8fbed1-627b-401f-89f5-fb9c36ae5a1f/formation/faa71e0a-4d17-4a77-aeac-42803581e13b HTTP/1.1: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 Host: api.heroku.com: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 User-Agent: heroku/v5 (darwin; arm64) terraform-provider-heroku/dev: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 Accept: application/vnd.heroku+json; version=3: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 Authorization: [redacted]: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 Request-Id: ee86fcd2-11f2-48d7-bbbf-b60344e9f7e7: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 Accept-Encoding: gzip: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.347+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56: timestamp=2022-11-23T20:52:56.346+1100
+2022-11-23T20:52:56.635+1100 [INFO]  provider.terraform-provider-heroku_v5.1.6: 2022/11/23 20:52:56 HTTP/2.0 200 OK
+Cache-Control: private, no-cache
+Content-Type: application/json
+Date: Wed, 23 Nov 2022 09:52:56 GMT
+Etag: "7347f8661454633240e9489a97766a6a"
+Last-Modified: Wed, 23 Nov 2022 09:52:56 GMT
+Oauth-Scope: global
+Oauth-Scope-Accepted: global read read-protected write write-protected
+Ratelimit-Multiplier: 1
+Ratelimit-Remaining: 4497
+Request-Id: ff7de2a6-d915-46d9-81db-e5e07c94c3d5,ee86fcd2-11f2-48d7-bbbf-b60344e9f7e7,1194b37e-b097-d637-ebdb-8fcb21dd3469,5a2292c6-7e9c-6584-d283-368da58d4c1f
+Traceparent: 00-9e726a92ae94b7af70c65b70911527c8-6fa896db660477e5-01
+Vary: Authorization,Accept-Encoding
+Via: 1.1 spaces-router (e13668ca8eb7), 2.0 spaces-router (e13668ca8eb7)
+X-Content-Type-Options: nosniff
+X-Runtime: 0.044848952
+
+{"app":{"id":"9d8fbed1-627b-401f-89f5-fb9c36ae5a1f","name":"my-magic-app-123456789"},"command":"npm start","created_at":"2022-11-23T09:52:44Z","id":"faa71e0a-4d17-4a77-aeac-42803581e13b","type":"web","quantity":1,"size":"Hobby","updated_at":"2022-11-23T09:52:56Z"}: timestamp=2022-11-23T20:52:56.634+1100
+2022-11-23T20:52:56.636+1100 [WARN]  Provider "provider[\"registry.terraform.io/heroku/heroku\"]" produced an unexpected new value for heroku_formation.this, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .quantity: was cty.NumberIntVal(0), but now cty.NumberIntVal(1)
+[0m[1mheroku_formation.this: Creation complete after 1s [id=faa71e0a-4d17-4a77-aeac-42803581e13b][0m
+2022-11-23T20:52:56.659+1100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-11-23T20:52:56.660+1100 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/heroku/heroku/5.1.6/darwin_arm64/terraform-provider-heroku_v5.1.6 pid=30706
+2022-11-23T20:52:56.661+1100 [DEBUG] provider: plugin exited
+[0m[1m[32m
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+[0m
